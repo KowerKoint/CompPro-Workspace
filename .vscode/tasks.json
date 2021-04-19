@@ -101,7 +101,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++ build",
-            "command": "/usr/bin/g++",
+            "command": "g++",
             "args": [
                 "-g",
                 "${file}",
@@ -119,7 +119,7 @@
                 "$gcc"
             ],
             "group": "build",
-            "detail": "コンパイラ: /usr/bin/g++",
+            "detail": "コンパイラ: g++",
             "presentation": {
                 "reveal": "silent",
                 "clear": true
