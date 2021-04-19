@@ -12,7 +12,7 @@ using ll = long long;
 constexpr int INF = 1001001001;
 constexpr ll LINF = 1001001001001001001ll;
 
-int solve(){
+void solve(){
     // write your solution here.
 }
 
@@ -27,9 +27,7 @@ int main() {
     int t = 1;
     //cin >> t; // comment out if solving multi testcase
     for(int testCase = 1;testCase <= t;++testCase){
-        if (solve()) {
-            return 1;
-        }
+        solve();
     }
     return 0;
 }
