@@ -2,11 +2,12 @@ using namespace std;
 #include "bits/stdc++.h"
 
 // add your library with double quotation #include"" here.
-// #include "atcoder/all"
-// using namespace atcoder;
+#include "atcoder/all"
+using namespace atcoder;
 
 // define your macros here.
-// #define REP(a,b) for(long long a = 0;a < b;++a)
+#define REP(a,b) for(long long a = 0;a < b;++a)
+#define ALL(a) (a).begin(),(a).end()
 
 #define int long long
 void solve(){
