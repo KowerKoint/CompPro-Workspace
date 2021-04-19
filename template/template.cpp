@@ -1,5 +1,4 @@
-using namespace std;
-#include "bits/stdc++.h"
+#include "ei1333/template/template.cpp"
 
 // add your library with double quotation #include"" here.
 #include "atcoder/all"
