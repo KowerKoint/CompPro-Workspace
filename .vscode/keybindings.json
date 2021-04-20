@@ -1,0 +1,12 @@
+[
+    {
+        "key": "F6",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Submission"
+    },
+    {
+        "key": "Shift+F6",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Test"
+    }
+]
