@@ -76,7 +76,9 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp",
-        "bit": "cpp"
+        "bit": "cpp",
+        "ranges": "cpp",
+        "span": "cpp"
     },
     "cmake.configureOnOpen": false
 }
