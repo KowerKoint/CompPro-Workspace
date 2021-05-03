@@ -110,7 +110,9 @@
                 "-I",
                 "${workspaceFolder}",
                 "-I",
-                "${workspaceFolder}/library"
+                "${workspaceFolder}/library",
+                "-std=gnu++17",
+                "-O2"
             ],
             "options": {
                 "cwd": "${fileDirname}"
