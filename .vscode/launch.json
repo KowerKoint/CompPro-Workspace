@@ -15,7 +15,7 @@
             "environment": [],
             "externalConsole": true,
             "MIMode": "lldb",
-            "miDebuggerPath": "/usr/bin/lldb",
+            "miDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
                     "description": "gdb の再フォーマットを有効にする",
