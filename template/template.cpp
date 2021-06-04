@@ -1,12 +1,13 @@
 #include "ei1333/template/template.cpp"
 
 // add your library with double quotation #include"" here.
-// #include "atcoder/all"
-// using namespace atcoder;
+#include "atcoder/all"
+using namespace atcoder;
 
 // define your macros here.
-#define REP(a,b) for(long long a = 0;a < b;++a)
+#define REP(a,b) for(int a = 0;a < b;++a)
 #define ALL(a) (a).begin(),(a).end()
+#define END(a) { cout << (a) << '\n'; return; }
 using ll = long long;
 constexpr int INF = 1001001001;
 constexpr ll LINF = 1001001001001001001ll;
