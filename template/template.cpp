@@ -9,6 +9,21 @@ using namespace atcoder;
 #define ALL(a) (a).begin(),(a).end()
 #define END(a) { cout << (a) << '\n'; return; }
 using ll = long long;
+using P = pair<int, int>;
+using VI = vector<int>;
+using VVI = vector<VI>;
+using VVVI = vector<VVI>;
+using VL = vector<ll>;
+using VVL = vector<VL>;
+using VVVL = vector<VVL>;
+using VP = vector<P>;
+using VVP = vector<VP>;
+using VVVP = vector<VVP>;
+using VD = vector<double>;
+using VVD = vector<VD>;
+using VVVD = vector<VVD>;
+using MI7 = modint1000000007;
+using MI3 = modint998244353;
 constexpr int INF = 1001001001;
 constexpr ll LINF = 1001001001001001001ll;
 
