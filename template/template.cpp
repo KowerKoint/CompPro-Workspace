@@ -5,7 +5,7 @@
 using namespace atcoder;
 
 // define your macros here.
-#define REP(a,b) for(int a = 0;a < b;++a)
+#define REP(a,b) for(int a = 0;a < (b);++a)
 #define ALL(a) (a).begin(),(a).end()
 #define END(a) { cout << (a) << '\n'; return; }
 using ll = long long;
