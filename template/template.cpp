@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//#define atcoderall
 //#include <atcoder/all>
-//using namespace atcoder;
-//using MI7 = modint1000000007;
-//using MI3 = modint998244353;
 
 #include "me/template.cpp"
 
