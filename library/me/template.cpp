@@ -26,7 +26,7 @@ using VVVS = vector<VVS>;
 constexpr int INF = 1001001001;
 constexpr ll LINF = 1001001001001001001ll;
 
-#ifdef atcoderall
+#ifdef aclmodint
 
 using namespace atcoder;
 using MI7 = modint1000000007;
