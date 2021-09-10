@@ -92,7 +92,8 @@
         "ios": "cpp",
         "locale": "cpp",
         "queue": "cpp",
-        "version": "cpp"
+        "version": "cpp",
+        "segtree": "cpp"
     },
     "cmake.configureOnOpen": false
 }

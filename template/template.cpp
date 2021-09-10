@@ -1,8 +1,7 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-//#define aclmodint
-//#include <atcoder/all>
+/* #define aclmodint */
+/* #define aclsegtree */
+/* #include <atcoder/all> */
+/* using namespace atcoder; */
 
 #include "me/template.cpp"
 
