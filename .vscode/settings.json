@@ -93,7 +93,9 @@
         "locale": "cpp",
         "queue": "cpp",
         "version": "cpp",
-        "segtree": "cpp"
+        "segtree": "cpp",
+        "numbers": "cpp",
+        "*.rh": "cpp"
     },
     "cmake.configureOnOpen": false
 }
