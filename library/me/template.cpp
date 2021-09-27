@@ -205,4 +205,10 @@ using RAddMinQ = lazy_segtree<S, min_op<S>, min_e<S>,
 template<typename S, typename F>
 using RAddMaxQ = lazy_segtree<S, max_op<S>, max_e<S>,
   F, add_mapping<S, F>, add_composition<F>, add_id<F>>;
+template<typename S, typename F>
+using RMinMinQ = lazy_segtree<S, min_op<S>, min_e<S>,
+  F, chmin_mapping<S, F>, chmin_composition<F>, chmin_id<F>>;
+template<typename S, typename F>
+using RMaxMaxQ = lazy_segtree<S, max_op<S>, max_e<S>,
+  F, chmax_mapping<S, F>, chmax_composition<F>, chmax_id<F>>;
 #endif
