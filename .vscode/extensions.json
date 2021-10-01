@@ -2,7 +2,6 @@
     "recommendations": [
         "ms-vscode.cpptools-themes",
         "ms-ceintl.vscode-language-pack-ja",
-        "ms-vscode-remote.remote-wsl",
         "ms-vscode.cpptools",
         "austin.code-gnu-global",
         "jeff-hykin.better-cpp-syntax",
