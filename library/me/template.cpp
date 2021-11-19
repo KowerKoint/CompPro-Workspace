@@ -135,10 +135,10 @@ template <typename T>
 pair<VI, vector<T>> compress(const vector<T> &a) {
     int n = a.size();
     vector<T> x;
-    REP(i, n) x.push_back(i);
+    REP(i, n) x.push_back(a[i]);
     sort(ALL(x)); x.erase(unique(ALL(x)), x.end());
     VI res(n);
-    REP(i, n) res[i] = lower_bound(ALL(x), a);
+    REP(i, n) res[i] = lower_bound(ALL(x), a[i]) - x.begin();
     return make_pair(res, x);
 }
 
