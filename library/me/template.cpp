@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define REP(a,b) for(int a = 0;a < (int)(b);++a)
-#define FOR(i,a,b) for(ll i = a; i < (ll)(b); i++)
+#define REP(i, n) for(int i = 0; i < (int)(n); i++)
+#define FOR(i, a, b) for(ll i = a; i < (ll)(b); i++)
 #define ALL(a) (a).begin(),(a).end()
 #define END(a) { print(a); return; }
 #define DBG(a) { cerr << #a << ": "; dbg(a); }
