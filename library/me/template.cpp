@@ -82,18 +82,18 @@ istream &operator>>(istream &is, MI7 &x) {
 #endif
 
 void print() { cout << '\n'; }
-template<class T>
+template<typename T>
 void print(const T &t) { cout << t << '\n'; }
-template<class Head, class... Tail>
+template<typename Head, typename... Tail>
 void print(const Head &head, const Tail &... tail) {
     cout << head << ' ';
     print(tail...);
 }
 
 void dbg() { cout << '\n'; }
-template<class T>
+template<typename T>
 void dbg(const T &t) { cerr << t << '\n'; }
-template<class Head, class... Tail>
+template<typename Head, typename... Tail>
 void dbg(const Head &head, const Tail &... tail) {
     cerr << head << ' ';
     dbg(tail...);
