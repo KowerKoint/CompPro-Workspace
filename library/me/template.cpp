@@ -1,11 +1,22 @@
+// This is a dummy line
+#ifndef ONLINE_JUDGE
+#define _GLIBCXX_DEBUG
+#endif
+
 #include <bits/stdc++.h>
 using namespace std;
 
 #define REP(i, n) for(int i = 0; i < (int)(n); i++)
 #define FOR(i, a, b) for(ll i = a; i < (ll)(b); i++)
 #define ALL(a) (a).begin(),(a).end()
-#define END(a) { print(a); return; }
+#define END(...) { print(__VA_ARGS__); return; }
+
+#ifdef ONLINE_JUDGE
+#define DBG(...) ;
+#else
 #define DBG(a) { cerr << #a << ": "; dbg(a); }
+#endif
+
 using VI = vector<int>;
 using VVI = vector<VI>;
 using VVVI = vector<VVI>;
@@ -90,7 +101,11 @@ void print(const Head &head, const Tail &... tail) {
     print(tail...);
 }
 
-void dbg() { cout << '\n'; }
+#ifdef ONLINE_JUDGE
+template<typename... Args>
+void dbg(const Args &... args) {}
+#else
+void dbg() { cerr << '\n'; }
 template<typename T>
 void dbg(const T &t) { cerr << t << '\n'; }
 template<typename Head, typename... Tail>
@@ -98,6 +113,7 @@ void dbg(const Head &head, const Tail &... tail) {
     cerr << head << ' ';
     dbg(tail...);
 }
+#endif
 
 template< typename T1, typename T2 >
 ostream &operator<<(ostream &os, const pair< T1, T2 >& p) {

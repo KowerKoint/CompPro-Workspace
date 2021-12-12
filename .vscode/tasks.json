@@ -104,6 +104,7 @@
             "command": "g++",
             "args": [
                 "-g",
+                "-ftrapv",
                 "${file}",
                 "-o",
                 "${fileBasenameNoExtension}",
