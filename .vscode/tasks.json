@@ -112,6 +112,7 @@
                 "${workspaceFolder}",
                 "-I",
                 "${workspaceFolder}/library",
+                "-I",
                 "${workspaceFolder}/library/atcoder",
                 "-std=gnu++17",
                 "-O2"
