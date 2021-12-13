@@ -3,7 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/library/**"
+                "${workspaceFolder}/library/**",
+                "${workspaceFolder}/library/atcoder/**"
             ],
             "defines": [
                 "_DEBUG",
