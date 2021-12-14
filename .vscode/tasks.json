@@ -104,6 +104,7 @@
             "command": "g++",
             "args": [
                 "-g",
+                "-ftrapv",
                 "${file}",
                 "-o",
                 "${fileBasenameNoExtension}",
@@ -111,6 +112,8 @@
                 "${workspaceFolder}",
                 "-I",
                 "${workspaceFolder}/library",
+                "-I",
+                "${workspaceFolder}/library/atcoder",
                 "-std=gnu++17",
                 "-O2"
             ],
