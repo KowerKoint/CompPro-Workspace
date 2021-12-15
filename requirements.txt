@@ -1,4 +1,3 @@
-appdirs
 online-judge-tools
 online-judge-verify-helper
 online-judge-template-generator
