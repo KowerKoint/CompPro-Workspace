@@ -51,7 +51,7 @@
         {
             "label": "Expand #includes",
             "type": "shell",
-            "command": "oj-bundle ${file} -I library > ${fileDirname}/${fileBasenameNoExtension}_expanded.cpp",
+            "command": "oj-bundle ${file} -I library -I library/atcoder > ${fileDirname}/${fileBasenameNoExtension}_expanded.cpp",
             "problemMatcher": [],
             "options": {
                 "cwd": "${workspaceFolder}"
