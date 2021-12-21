@@ -159,6 +159,7 @@ pair<VI, vector<T>> compress(const vector<T> &a) {
 }
 
 #ifdef aclsegtree
+
 template<typename S>
 struct value_size { S value; int size; };
 
@@ -204,6 +205,8 @@ template<typename S, typename F>
 value_size<S> add_mapping_size(F f, value_size<S> x) {
     return {x.value + x.size * f, x.size};
 }
+template <typename S,typename F, F ID>
+S change_mapping(F f, S x) { return (f == ID? x : f); }
 
 template<typename F>
 F chmin_composition(F f, F g) { return min(f, g); }
@@ -211,6 +214,8 @@ template<typename F>
 F chmax_composition(F f, F g) { return max(f, g); }
 template<typename F>
 F add_composition(F f, F g) { return f + g; }
+template <typename S,typename F, F ID>
+F change_composition(F f, F g) { return (f == ID? g : f); }
 
 template<typename F>
 F chmin_id() { return numeric_limits<F>::max(); }
@@ -218,6 +223,8 @@ template<typename F>
 F chmax_id() { return numeric_limits<F>::min(); }
 template<typename F>
 F add_id() { return 0; }
+template<typename F, F ID>
+F change_id() { return ID; }
 
 template<typename S>
 using RSumQ = segtree<S, sum_op<S>, sum_e<S>>;
@@ -241,4 +248,14 @@ using RMinMinQ = lazy_segtree<S, min_op<S>, min_e<S>,
 template<typename S, typename F>
 using RMaxMaxQ = lazy_segtree<S, max_op<S>, max_e<S>,
     F, chmax_mapping<S, F>, chmax_composition<F>, chmax_id<F>>;
+template<typename S, typename F, F ID>
+using RChangeMinQ = lazy_segtree<S, min_op<S>, min_e<S>,
+    F, change_mapping<S, F, ID>,
+    change_composition<S, F, ID>,
+    change_id<F, ID>()>;
+template<typename S, typename F, F ID>
+using RChangeMaxQ = lazy_segtree<S, max_op<S>, max_e<S>,
+    F, change_mapping<S, F, ID>,
+    change_composition<S, F, ID>,
+    change_id<F, ID>()>;
 #endif
