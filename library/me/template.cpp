@@ -12,7 +12,7 @@ using namespace std;
 #define END(...) { print(__VA_ARGS__); return; }
 
 #ifdef ONLINE_JUDGE
-#define DBG(...) ;
+#define DBG(...) {}
 #else
 #define DBG(a) { cerr << #a << ": "; dbg(a); }
 #endif
