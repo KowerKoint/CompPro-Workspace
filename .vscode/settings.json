@@ -95,7 +95,9 @@
         "version": "cpp",
         "segtree": "cpp",
         "numbers": "cpp",
-        "*.rh": "cpp"
+        "*.rh": "cpp",
+        "maxflow": "cpp",
+        "internal_queue": "cpp"
     },
     "cmake.configureOnOpen": false
 }
