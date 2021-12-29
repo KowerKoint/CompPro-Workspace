@@ -1,25 +1,29 @@
+// This is a dummy line
+#ifndef ONLINE_JUDGE
+#define _GLIBCXX_DEBUG
+#endif
+
 #include <bits/stdc++.h>
 using namespace std;
 
-#define REP(a,b) for(int a = 0;a < (b);++a)
+#define REP(i, n) for(int i = 0; i < (int)(n); i++)
+#define FOR(i, a, b) for(ll i = a; i < (ll)(b); i++)
 #define ALL(a) (a).begin(),(a).end()
-#define END(a) { print(a); return; }
+#define END(...) { print(__VA_ARGS__); return; }
+
+#ifdef ONLINE_JUDGE
+#define DBG(...) {}
+#else
 #define DBG(a) { cerr << #a << ": "; dbg(a); }
-using ll = long long;
-using P = pair<int, int>;
+#endif
+
 using VI = vector<int>;
 using VVI = vector<VI>;
 using VVVI = vector<VVI>;
+using ll = long long;
 using VL = vector<ll>;
 using VVL = vector<VL>;
 using VVVL = vector<VVL>;
-using VP = vector<P>;
-using VVP = vector<VP>;
-using VVVP = vector<VVP>;
-using LP = pair<ll, ll>;
-using VLP = vector<LP>;
-using VVLP = vector<VLP>;
-using VVVLP = vector<VVLP>;
 using VD = vector<double>;
 using VVD = vector<VD>;
 using VVVD = vector<VVD>;
@@ -29,6 +33,14 @@ using VVVS = vector<VVS>;
 using VC = vector<char>;
 using VVC = vector<VC>;
 using VVVC = vector<VVC>;
+using P = pair<int, int>;
+using VP = vector<P>;
+using VVP = vector<VP>;
+using VVVP = vector<VVP>;
+using LP = pair<ll, ll>;
+using VLP = vector<LP>;
+using VVLP = vector<VLP>;
+using VVVLP = vector<VVLP>;
 constexpr int INF = 1001001001;
 constexpr ll LINF = 1001001001001001001ll;
 constexpr int DX[] = {1, 0, -1, 0};
@@ -46,80 +58,87 @@ using VV3 = vector<V3>;
 using VVV3 = vector<VV3>;
 
 ostream &operator<<(ostream &os, const modint &x) {
-  os << x.val();
-  return os;
+    os << x.val();
+    return os;
 }
 
 ostream &operator<<(ostream &os, const MI3 &x) {
-  os << x.val();
-  return os;
+    os << x.val();
+    return os;
 }
 
 ostream &operator<<(ostream &os, const MI7 &x) {
-  os << x.val();
-  return os;
+    os << x.val();
+    return os;
 }
 
 istream &operator>>(istream &is, modint &x) {
-  int y; is >> y;
-  x = y;
-  return is;
+    int y; is >> y;
+    x = y;
+    return is;
 }
 
 istream &operator>>(istream &is, MI3 &x) {
-  int y; is >> y;
-  x = y;
-  return is;
+    int y; is >> y;
+    x = y;
+    return is;
 }
 
 istream &operator>>(istream &is, MI7 &x) {
-  int y; is >> y;
-  x = y;
-  return is;
+    int y; is >> y;
+    x = y;
+    return is;
 }
 
 #endif
 
-template<class T>
+void print() { cout << '\n'; }
+template<typename T>
 void print(const T &t) { cout << t << '\n'; }
-template<class Head, class... Tail>
+template<typename Head, typename... Tail>
 void print(const Head &head, const Tail &... tail) {
-  cout << head << ' ';
-  print(tail...);
+    cout << head << ' ';
+    print(tail...);
 }
 
-template<class T>
+#ifdef ONLINE_JUDGE
+template<typename... Args>
+void dbg(const Args &... args) {}
+#else
+void dbg() { cerr << '\n'; }
+template<typename T>
 void dbg(const T &t) { cerr << t << '\n'; }
-template<class Head, class... Tail>
+template<typename Head, typename... Tail>
 void dbg(const Head &head, const Tail &... tail) {
-  cerr << head << ' ';
-  dbg(tail...);
+    cerr << head << ' ';
+    dbg(tail...);
 }
+#endif
 
 template< typename T1, typename T2 >
 ostream &operator<<(ostream &os, const pair< T1, T2 >& p) {
-  os << p.first << " " << p.second;
-  return os;
+    os << p.first << " " << p.second;
+    return os;
 }
 
 template< typename T1, typename T2 >
 istream &operator>>(istream &is, pair< T1, T2 > &p) {
-  is >> p.first >> p.second;
-  return is;
+    is >> p.first >> p.second;
+    return is;
 }
 
 template< typename T >
 ostream &operator<<(ostream &os, const vector< T > &v) {
-  for(int i = 0; i < (int) v.size(); i++) {
-    os << v[i] << (i + 1 != (int) v.size() ? " " : "");
-  }
-  return os;
+    for(int i = 0; i < (int) v.size(); i++) {
+        os << v[i] << (i + 1 != (int) v.size() ? " " : "");
+    }
+    return os;
 }
 
 template< typename T >
 istream &operator>>(istream &is, vector< T > &v) {
-  for(T &in : v) is >> in;
-  return is;
+    for(T &in : v) is >> in;
+    return is;
 }
 
 template< typename T1, typename T2 >
@@ -128,7 +147,19 @@ inline bool chmax(T1 &a, T2 b) { return a < b && (a = b, true); }
 template< typename T1, typename T2 >
 inline bool chmin(T1 &a, T2 b) { return a > b && (a = b, true); }
 
+template <typename T>
+pair<VI, vector<T>> compress(const vector<T> &a) {
+    int n = a.size();
+    vector<T> x;
+    REP(i, n) x.push_back(a[i]);
+    sort(ALL(x)); x.erase(unique(ALL(x)), x.end());
+    VI res(n);
+    REP(i, n) res[i] = lower_bound(ALL(x), a[i]) - x.begin();
+    return make_pair(res, x);
+}
+
 #ifdef aclsegtree
+
 template<typename S>
 struct value_size { S value; int size; };
 
@@ -140,15 +171,15 @@ template<typename S>
 S sum_op(S l, S r) { return l + r; };
 template<typename S>
 value_size<S> sum_op_size(value_size<S> l, value_size<S> r) {
-  return {l.value + r.value, l.size + r.size};
+    return {l.value + r.value, l.size + r.size};
 };
 template<typename S>
 value_size<S> min_op_size(value_size<S> l, value_size<S> r) {
-  return {min(l.value, r.value), l.size + r.size};
+    return {min(l.value, r.value), l.size + r.size};
 };
 template<typename S>
 value_size<S> max_op_size(value_size<S> l, value_size<S> r) {
-  return {max(l.value, r.value), l.size + r.size};
+    return {max(l.value, r.value), l.size + r.size};
 };
 
 template<typename S>
@@ -172,8 +203,10 @@ template<typename S, typename F>
 S add_mapping(F f, S x) { return x + f; }
 template<typename S, typename F>
 value_size<S> add_mapping_size(F f, value_size<S> x) {
-  return {x.value + x.size * f, x.size};
+    return {x.value + x.size * f, x.size};
 }
+template <typename S,typename F, F ID>
+S change_mapping(F f, S x) { return (f == ID? x : f); }
 
 template<typename F>
 F chmin_composition(F f, F g) { return min(f, g); }
@@ -181,6 +214,8 @@ template<typename F>
 F chmax_composition(F f, F g) { return max(f, g); }
 template<typename F>
 F add_composition(F f, F g) { return f + g; }
+template <typename S,typename F, F ID>
+F change_composition(F f, F g) { return (f == ID? g : f); }
 
 template<typename F>
 F chmin_id() { return numeric_limits<F>::max(); }
@@ -188,6 +223,8 @@ template<typename F>
 F chmax_id() { return numeric_limits<F>::min(); }
 template<typename F>
 F add_id() { return 0; }
+template<typename F, F ID>
+F change_id() { return ID; }
 
 template<typename S>
 using RSumQ = segtree<S, sum_op<S>, sum_e<S>>;
@@ -198,17 +235,27 @@ using RMinQ = segtree<S, min_op<S>, min_e<S>>;
 
 template<typename S, typename F>
 using RAddSumQ = lazy_segtree<value_size<S>, sum_op_size<S>, sum_e_size<S>,
-  F, add_mapping_size<S, F>, add_composition<F>, add_id<F>>;
+    F, add_mapping_size<S, F>, add_composition<F>, add_id<F>>;
 template<typename S, typename F>
 using RAddMinQ = lazy_segtree<S, min_op<S>, min_e<S>,
-  F, add_mapping<S, F>, add_composition<F>, add_id<F>>;
+    F, add_mapping<S, F>, add_composition<F>, add_id<F>>;
 template<typename S, typename F>
 using RAddMaxQ = lazy_segtree<S, max_op<S>, max_e<S>,
-  F, add_mapping<S, F>, add_composition<F>, add_id<F>>;
+    F, add_mapping<S, F>, add_composition<F>, add_id<F>>;
 template<typename S, typename F>
 using RMinMinQ = lazy_segtree<S, min_op<S>, min_e<S>,
-  F, chmin_mapping<S, F>, chmin_composition<F>, chmin_id<F>>;
+    F, chmin_mapping<S, F>, chmin_composition<F>, chmin_id<F>>;
 template<typename S, typename F>
 using RMaxMaxQ = lazy_segtree<S, max_op<S>, max_e<S>,
-  F, chmax_mapping<S, F>, chmax_composition<F>, chmax_id<F>>;
+    F, chmax_mapping<S, F>, chmax_composition<F>, chmax_id<F>>;
+template<typename S, typename F, F ID>
+using RChangeMinQ = lazy_segtree<S, min_op<S>, min_e<S>,
+    F, change_mapping<S, F, ID>,
+    change_composition<S, F, ID>,
+    change_id<F, ID>()>;
+template<typename S, typename F, F ID>
+using RChangeMaxQ = lazy_segtree<S, max_op<S>, max_e<S>,
+    F, change_mapping<S, F, ID>,
+    change_composition<S, F, ID>,
+    change_id<F, ID>()>;
 #endif
