@@ -18,6 +18,25 @@
             "compilerArgs": [
                 "-std=gnu++17"
             ]
+        },
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/library/**",
+                "${workspaceFolder}/library/atcoder/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "/usr/local/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-gcc-arm64",
+            "compilerArgs": [
+                "-std=gnu++17"
+            ]
         }
     ],
     "version": 4
