@@ -41,6 +41,12 @@ using LP = pair<ll, ll>;
 using VLP = vector<LP>;
 using VVLP = vector<VLP>;
 using VVVLP = vector<VVLP>;
+
+template <typename T>
+using PQ = priority_queue<T>;
+template <typename T>
+using GPQ = priority_queue<T, vector<T>, greater<T>>;
+
 constexpr int INF = 1001001001;
 constexpr ll LINF = 1001001001001001001ll;
 constexpr int DX[] = {1, 0, -1, 0};
