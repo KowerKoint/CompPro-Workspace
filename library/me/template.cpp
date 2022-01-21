@@ -164,6 +164,18 @@ pair<VI, vector<T>> compress(const vector<T> &a) {
     return make_pair(res, x);
 }
 
+template <typename T>
+pair<vector<T>, vector<T>> factorial(int n) {
+    vector<T> res(n+1), rev(n+1);
+    res[0] = 1;
+    REP(i, n) res[i+1] = res[i] * (i+1);
+    rev[n] = 1 / res[n];
+    for(int i = n; i > 0; i--) {
+        rev[i-1] = rev[i] * i;
+    }
+    return make_pair(res, rev);
+}
+
 #ifdef aclsegtree
 
 template<typename S>
