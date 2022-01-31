@@ -218,7 +218,10 @@ value_size<S> add_mapping_size(F f, value_size<S> x) {
 template <typename S,typename F, F ID>
 S change_mapping(F f, S x) { return (f == ID? x : f); }
 template <typename S,typename F, F ID>
-S change_mapping_size(F f, value_size<S> x) { return (f == ID? x : value_size<S>(f, x.size)); }
+value_size<S> change_mapping_size(F f, value_size<S> x) { 
+    value_size<S> ret = {f * x.size, x.size};
+    return (f == ID? x : ret); 
+}
 template <typename S, typename F1, typename F2>
 S linear_mapping(pair<F1, F2> f, S x) { return x * f.first + f.second; }
 template <typename S, typename F1, typename F2>
