@@ -3,8 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/library/**",
-                "${workspaceFolder}/library/atcoder/**"
+                "${workspaceFolder}/library",
+                "${workspaceFolder}/ac-library"
             ],
             "defines": [
                 "_DEBUG",
@@ -22,8 +22,8 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/library/**",
-                "${workspaceFolder}/library/atcoder/**"
+                "${workspaceFolder}/library",
+                "${workspaceFolder}/ac-library"
             ],
             "defines": [
                 "_DEBUG",

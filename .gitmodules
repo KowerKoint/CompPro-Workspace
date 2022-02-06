@@ -4,6 +4,6 @@
 [submodule "library/library"]
 	path = library/library
 	url = https://github.com/beet-aizu/library.git
-[submodule "library/atcoder"]
-	path = library/atcoder
+[submodule "ac-library"]
+	path = ac-library
 	url = https://github.com/atcoder/ac-library.git
